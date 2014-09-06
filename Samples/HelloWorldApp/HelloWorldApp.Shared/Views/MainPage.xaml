@@ -1,0 +1,29 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloWorldApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="using:Microsoft.Practices.Prism.StoreApps"
+    xmlns:viewModels="using:HelloWorldApp.ViewModels"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:ReactivePrism="using:ReactivePrism"
+    x:Class="HelloWorldApp.Views.MainPage"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type=viewModels:MainPageViewModel}"
+    mc:Ignorable="d">
+
+    <Interactivity:Interaction.Behaviors>
+        <ReactivePrism:InteractionRequestTrigger SourceObject="{Binding ConfirmRequest, Mode=OneWay}">
+            <ReactivePrism:InteractionRequestTrigger.Actions>
+                <ReactivePrism:ConfirmationTriggerAction/>
+            </ReactivePrism:InteractionRequestTrigger.Actions>
+        </ReactivePrism:InteractionRequestTrigger>
+    </Interactivity:Interaction.Behaviors>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Input.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <Button Content="Convert" HorizontalAlignment="Stretch" Margin="7,44,7,0" VerticalAlignment="Top" Command="{Binding AlertCommand, Mode=OneWay}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" TextWrapping="Wrap" Text="{Binding Output.Value}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"/>
+
+    </Grid>
+</Page>

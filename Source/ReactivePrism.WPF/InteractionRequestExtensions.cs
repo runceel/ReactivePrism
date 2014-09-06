@@ -11,8 +11,18 @@ using System.Threading.Tasks;
 
 namespace ReactivePrism
 {
+    /// <summary>
+    /// InteractionRequest extensions.
+    /// </summary>
     public static class InteractionRequestExtensions
     {
+        /// <summary>
+        /// Convert Raise event into IObservable.
+        /// </summary>
+        /// <typeparam name="T">INotification object</typeparam>
+        /// <param name="self">InteractinRequest</param>
+        /// <param name="context">INotification object</param>
+        /// <returns>IO</returns>
         public static IObservable<T> RaiseAsObservable<T>(this InteractionRequest<T> self, T context)
             where T : INotification
         {
@@ -23,6 +33,13 @@ namespace ReactivePrism
             });
         }
 
+        /// <summary>
+        /// Convert Raise event into Task.
+        /// </summary>
+        /// <typeparam name="T">INotification object</typeparam>
+        /// <param name="self">InteractinRequest</param>
+        /// <param name="context">INotification object</param>
+        /// <returns>Task</returns>
         public static Task<T> RaiseAsync<T>(this InteractionRequest<T> self, T context)
             where T : INotification
         {

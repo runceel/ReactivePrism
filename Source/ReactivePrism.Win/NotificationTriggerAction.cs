@@ -10,6 +10,9 @@ using Windows.UI.Xaml;
 
 namespace ReactivePrism
 {
+    /// <summary>
+    /// Notification trigger action.
+    /// </summary>
     public class NotificationTriggerAction : TriggerAction<DependencyObject>
     {
         protected override async void Invoke(object parameter)

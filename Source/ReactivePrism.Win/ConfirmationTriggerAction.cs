@@ -10,6 +10,9 @@ using Windows.UI.Xaml;
 
 namespace ReactivePrism
 {
+    /// <summary>
+    /// Confirmation Action.
+    /// </summary>
     public class ConfirmationTriggerAction : TriggerAction<DependencyObject>
     {
         protected override async void Invoke(object parameter)

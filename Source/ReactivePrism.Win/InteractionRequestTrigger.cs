@@ -1,40 +1,52 @@
 ﻿using Codeplex.Reactive.Interactivity;
 using Microsoft.Practices.Prism.Interactivity.InteractionRequest;
+using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml;
 
 namespace ReactivePrism
 {
+    /// <summary>
+    /// InteractionRequest's Raised event trigger.
+    /// </summary>
     public class InteractionRequestTrigger : TriggerBase<DependencyObject>
     {
         public static readonly DependencyProperty SourceObjectProperty =
             DependencyProperty.Register(
                 "SourceObject",
-                typeof(IInteractionRequest),
+                typeof(object),
                 typeof(InteractionRequestTrigger),
                 new PropertyMetadata(null));
 
-        public IInteractionRequest SourceObject
+        /// <summary>
+        /// Binding InteractionRequest object.
+        /// </summary>
+        public object SourceObject
         {
-            get { return (IInteractionRequest)GetValue(SourceObjectProperty); }
+            get { return (object)GetValue(SourceObjectProperty); }
             set { SetValue(SourceObjectProperty, value); }
+        }
+
+        public ActionCollection Actions
+        {
+            get { return this.ActionsImpl; }
         }
 
         protected override void OnAttached()
         {
-            base.OnAttached();
-            if (this.SourceObject != null)
+            var r = this.SourceObject as IInteractionRequest;
+            if (r != null)
             {
-                this.SourceObject.Raised += this.SourceObject_Raised;
+                r.Raised += this.SourceObject_Raised;
             }
         }
 
         protected override void OnDetaching()
         {
-            if (this.SourceObject != null)
+            var r = this.SourceObject as IInteractionRequest;
+            if (r != null)
             {
-                this.SourceObject.Raised -= this.SourceObject_Raised;
+                r.Raised -= this.SourceObject_Raised;
             }
-            base.OnDetaching();
         }
 
         private void SourceObject_Raised(object sender, InteractionRequestEventArgs e)
