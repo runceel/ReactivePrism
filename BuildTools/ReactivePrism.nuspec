@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>ReactivePrism</id>
-    <version>0.1.1-beta1</version>
+    <version>0.1.1-beta2</version>
     <title>ReactivePrism</title>
     <authors>okazuki</authors>
     <owners>okazuki</owners>
-    <licenseUrl>http://reactiveproperty.codeplex.com/license</licenseUrl>
-    <projectUrl>http://reactiveproperty.codeplex.com/</projectUrl>
+    <licenseUrl>https://github.com/runceel/ReactivePrism/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/runceel/ReactivePrism</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>ReactivePrism is ReactiveProperty + Prism + InteractionRequestExtensions class. InteractionRequestExtensions convert InteractionRequest into IObservable.</description>
     <summary />
