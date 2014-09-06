@@ -15,20 +15,21 @@
     <tags>rx mvvm async rx-main prism</tags>
     <dependencies>
       <group targetFramework="net45">
-        <dependency id="ReactiveProperty" />
+        <dependency id="ReactiveProperty" version="1.0" />
         <dependency id="Prism" />
       </group>
       <group targetFramework="wpa81">
-        <dependency id="ReactiveProperty" />
+        <dependency id="ReactiveProperty" version="1.0" />
         <dependency id="PrismAdapter" />
       </group>
       <group targetFramework="win81">
-        <dependency id="ReactiveProperty" />
+        <dependency id="ReactiveProperty" version="1.0" />
         <dependency id="PrismAdapter" />
       </group>
     </dependencies>
   </metadata>
   <files>
+    <file src="../LICENSE.txt" target="." />
     <!-- platform -->
     <!-- WPF NET45 -->
     <file src="..\bin\WPF\ReactivePrism.WPF.dll" target="lib\net45" />
@@ -41,9 +42,9 @@
     <file src="..\bin\Win\Microsoft.Practices.Prism.Interactivity.xml" target="lib\win81" />
 
     <!-- WPA81 -->
-    <file src="..\bin\Win\ReactivePrism.WPA.dll" target="lib\wpa81" />
-    <file src="..\bin\Win\ReactivePrism.WPA.XML" target="lib\wpa81" />
-    <file src="..\bin\Win\Microsoft.Practices.Prism.Interactivity.dll" target="lib\wpa81" />
-    <file src="..\bin\Win\Microsoft.Practices.Prism.Interactivity.xml" target="lib\wpa81" />
+    <file src="..\bin\WPA\ReactivePrism.WPA.dll" target="lib\wpa81" />
+    <file src="..\bin\WPA\ReactivePrism.WPA.XML" target="lib\wpa81" />
+    <file src="..\bin\WPA\Microsoft.Practices.Prism.Interactivity.dll" target="lib\wpa81" />
+    <file src="..\bin\WPA\Microsoft.Practices.Prism.Interactivity.xml" target="lib\wpa81" />
   </files>
 </package>
