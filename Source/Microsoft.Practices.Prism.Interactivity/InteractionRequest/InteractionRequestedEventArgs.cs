@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Microsoft.Practices.Prism.Interactivity.InteractionRequest
 {
-    public class InteractionRequestEventArgs : EventArgs
+    public class InteractionRequestedEventArgs : EventArgs
     {
         public INotification Context { get; private set; }
         public Action Callback { get; private set; }
 
-        public InteractionRequestEventArgs(INotification context, Action callback)
+        public InteractionRequestedEventArgs(INotification context, Action callback)
         {
             this.Context = context;
             this.Callback = callback;

@@ -18,12 +18,22 @@
                 <ReactivePrism:ConfirmationTriggerAction/>
             </ReactivePrism:InteractionRequestTrigger.Actions>
         </ReactivePrism:InteractionRequestTrigger>
+        <ReactivePrism:InteractionRequestTrigger SourceObject="{Binding ConfirmRequest2, Mode=OneWay}">
+            <ReactivePrism:InteractionRequestTrigger.Actions>
+                <ReactivePrism:ConfirmationTriggerAction/>
+            </ReactivePrism:InteractionRequestTrigger.Actions>
+        </ReactivePrism:InteractionRequestTrigger>
     </Interactivity:Interaction.Behaviors>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Input.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="341*"/>
+            <ColumnDefinition Width="342*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Input.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button Content="Convert" HorizontalAlignment="Stretch" Margin="7,44,7,0" VerticalAlignment="Top" Command="{Binding AlertCommand, Mode=OneWay}"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" TextWrapping="Wrap" Text="{Binding Output.Value}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"/>
+        <Button Content="Convert2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="7,44,7,0" VerticalAlignment="Top" Command="{Binding AlertCommand2, Mode=OneWay}"/>
 
     </Grid>
 </Page>

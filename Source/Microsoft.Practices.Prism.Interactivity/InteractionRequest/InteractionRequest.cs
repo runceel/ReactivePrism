@@ -8,19 +8,19 @@ namespace Microsoft.Practices.Prism.Interactivity.InteractionRequest
 {
     public interface IInteractionRequest
     {
-        event EventHandler<InteractionRequestEventArgs> Raised;
+        event EventHandler<InteractionRequestedEventArgs> Raised;
     }
 
     public class InteractionRequest<T> : IInteractionRequest
         where T : INotification
     {
-        public event EventHandler<InteractionRequestEventArgs> Raised;
+        public event EventHandler<InteractionRequestedEventArgs> Raised;
         protected virtual void OnRaised(INotification context, Action callback)
         {
             var h = this.Raised;
             if (h != null)
             {
-                h(this, new InteractionRequestEventArgs(context, callback));
+                h(this, new InteractionRequestedEventArgs(context, callback));
             }
         }
 

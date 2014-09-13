@@ -49,7 +49,7 @@ namespace ReactivePrism
             }
         }
 
-        private void SourceObject_Raised(object sender, InteractionRequestEventArgs e)
+        private void SourceObject_Raised(object sender, InteractionRequestedEventArgs e)
         {
             this.InvokeActions(e);
         }

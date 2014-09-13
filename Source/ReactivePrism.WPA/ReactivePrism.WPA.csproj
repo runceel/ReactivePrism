@@ -99,6 +99,9 @@
     <Compile Include="..\ReactivePrism.WPF\InteractionRequestExtensions.cs">
       <Link>InteractionRequestExtensions.cs</Link>
     </Compile>
+    <Compile Include="..\ReactivePrism.WPF\ReactiveInteractionRequest.cs">
+      <Link>ReactiveInteractionRequest.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

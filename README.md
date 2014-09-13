@@ -47,3 +47,27 @@ public class MainWindowViewModel
     }
 }
 ```
+
+## ReactiveInteractionRequest
+
+IO<INotification> -> ReactiveInteractionRequest<INotification>.
+ReactiveInteractionRequest<INotification> is IObservable<INotification>.
+
+```cs
+this.AlertCommand2 = new ReactiveCommand();
+// IO<Confirmation> -> ReactiveInteractionRequest<Confirmation>
+this.ConfirmRequest2 = this.AlertCommand2
+    .Select(_ => new Confirmation
+    {
+        Title = "Confirm",
+        Content = "Convert OK?"
+    })
+    .ToInteractionRequest();
+
+// ReactiveInteractionRequest<Confirmation> is IObservable<Confirmation>.
+this.ConfirmRequest2
+    .Where(c => c.Confirmed)
+    .Select(_ => this.Input.Value)
+    .Select(s => s.ToUpper())
+    .Subscribe(s => this.Output.Value = s);
+```

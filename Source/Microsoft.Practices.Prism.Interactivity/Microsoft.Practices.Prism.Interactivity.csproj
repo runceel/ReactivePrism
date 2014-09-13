@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InteractionRequest\InteractionRequest.cs" />
-    <Compile Include="InteractionRequest\InteractionRequestEventArgs.cs" />
+    <Compile Include="InteractionRequest\InteractionRequestedEventArgs.cs" />
     <Compile Include="InteractionRequest\Notification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

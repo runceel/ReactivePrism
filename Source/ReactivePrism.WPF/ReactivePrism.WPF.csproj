@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="InteractionRequestExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReactiveInteractionRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

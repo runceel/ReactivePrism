@@ -17,7 +17,7 @@ namespace ReactivePrism
     {
         protected override async void Invoke(object parameter)
         {
-            var args = parameter as InteractionRequestEventArgs;
+            var args = parameter as InteractionRequestedEventArgs;
             if (args == null)
             {
                 throw new ArgumentException("parameter: " + parameter);

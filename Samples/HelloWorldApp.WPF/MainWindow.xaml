@@ -7,15 +7,23 @@
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>
-	<i:Interaction.Triggers>
-		<Custom:InteractionRequestTrigger SourceObject="{Binding ConfirmRequest, Mode=OneWay}">
-			<Custom:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
-		</Custom:InteractionRequestTrigger>
-	</i:Interaction.Triggers>
-	<Grid>
-		<TextBox Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Input.Value}" VerticalAlignment="Top"/>
-		<Button Content="Convert" Margin="10,38,10,0" VerticalAlignment="Top" Command="{Binding AlertCommand, Mode=OneWay}"/>
-		<TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" Text="{Binding Output.Value}" VerticalAlignment="Top"/>
+    <i:Interaction.Triggers>
+        <Custom:InteractionRequestTrigger SourceObject="{Binding ConfirmRequest, Mode=OneWay}">
+            <Custom:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
+        </Custom:InteractionRequestTrigger>
+        <Custom:InteractionRequestTrigger SourceObject="{Binding ConfirmRequest2, Mode=OneWay}">
+            <Custom:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
+        </Custom:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="258*"/>
+            <ColumnDefinition Width="259*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Input.Value}" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button Content="Convert" Margin="10,38,10,0" VerticalAlignment="Top" Command="{Binding AlertCommand, Mode=OneWay}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" Text="{Binding Output.Value}" VerticalAlignment="Top"/>
+        <Button Content="Convert2" Grid.Column="1" Margin="10,38,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Command="{Binding AlertCommand2, Mode=OneWay}" />
 
-	</Grid>
+    </Grid>
 </Window>
