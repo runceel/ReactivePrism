@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>ReactivePrism</id>
-    <version>0.1.1-beta3</version>
+    <version>0.2</version>
     <title>ReactivePrism</title>
     <authors>okazuki</authors>
     <owners>okazuki</owners>
@@ -20,11 +20,11 @@
       </group>
       <group targetFramework="wpa81">
         <dependency id="ReactiveProperty" version="1.0" />
-        <dependency id="PrismAdapter" version="0.1.10-beta4 " />
+        <dependency id="Prism.StoreApps" version="1.1.0" />
       </group>
       <group targetFramework="win81">
         <dependency id="ReactiveProperty" version="1.0" />
-        <dependency id="PrismAdapter" version="0.1.10-beta4 "/>
+        <dependency id="Prism.StoreApps" version="1.1.0"/>
       </group>
     </dependencies>
   </metadata>
