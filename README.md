@@ -48,7 +48,7 @@ public class MainWindowViewModel
 }
 ```
 
-## ReactiveInteractionRequest
+### ReactiveInteractionRequest
 
 IO<INotification> -> ReactiveInteractionRequest<INotification>.
 ReactiveInteractionRequest<INotification> is IObservable<INotification>.
@@ -70,4 +70,19 @@ this.ConfirmRequest2
     .Select(_ => this.Input.Value)
     .Select(s => s.ToUpper())
     .Subscribe(s => this.Output.Value = s);
+```
+
+### FlyoutIsOpenBehavior
+
+MVVM Support add to Flyout. Please show Samples/FlyoutSampleApp.
+
+```xml
+<Interactivity:Interaction.Behaviors>
+    <ReactivePrism:FlyoutIsOpenBehavior 
+        Flyout="{StaticResource FlyoutBase1}" 
+        Parent="{Binding ElementName=button}" 
+        ClosedCommand="{Binding ClosedCommand, Mode=OneWay}" 
+        OpenedCommand="{Binding OpenedCommand, Mode=OneWay}" 
+        IsOpen="{Binding IsOpen.Value, Mode=TwoWay}"/>
+</Interactivity:Interaction.Behaviors>
 ```

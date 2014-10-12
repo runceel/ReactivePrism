@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Reactive.Linq;
 using ReactivePrism;
+using Microsoft.Practices.Prism.Mvvm;
 
 namespace HelloWorldApp.ViewModels
 {

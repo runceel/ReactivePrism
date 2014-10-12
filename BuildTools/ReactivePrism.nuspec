@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>ReactivePrism</id>
-    <version>0.2</version>
+    <version>0.3</version>
     <title>ReactivePrism</title>
     <authors>okazuki</authors>
     <owners>okazuki</owners>
@@ -20,16 +20,17 @@
       </group>
       <group targetFramework="wpa81">
         <dependency id="ReactiveProperty" version="1.0" />
-        <dependency id="Prism.StoreApps" version="1.1.0" />
+        <dependency id="Prism.StoreApps" version="2.0" />
       </group>
       <group targetFramework="win81">
         <dependency id="ReactiveProperty" version="1.0" />
-        <dependency id="Prism.StoreApps" version="1.1.0"/>
+        <dependency id="Prism.StoreApps" version="2.0"/>
       </group>
     </dependencies>
   </metadata>
   <files>
     <file src="../LICENSE.txt" target="." />
+    <file src="../README.md" target="." />
     <!-- platform -->
     <!-- WPF NET45 -->
     <file src="..\bin\WPF\ReactivePrism.WPF.dll" target="lib\net45" />

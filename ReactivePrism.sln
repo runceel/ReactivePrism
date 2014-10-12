@@ -39,10 +39,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldApp.WindowsPhone"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldApp.WPF", "Samples\HelloWorldApp.WPF\HelloWorldApp.WPF.csproj", "{96544262-4795-474C-BEBB-B818D9F5D53B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FlyoutSampleApp", "FlyoutSampleApp", "{5ABB701D-3E42-4580-A0AD-DD0117476E01}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FlyoutSampleApp.Shared", "Samples\FlyoutSampleApp\FlyoutSampleApp.Shared\FlyoutSampleApp.Shared.shproj", "{10047FB6-0DF7-4823-A78A-916981E9AD97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyoutSampleApp.Windows", "Samples\FlyoutSampleApp\FlyoutSampleApp.Windows\FlyoutSampleApp.Windows.csproj", "{A8AC6113-4503-463F-ADE3-C25C1849666D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyoutSampleApp.WindowsPhone", "Samples\FlyoutSampleApp\FlyoutSampleApp.WindowsPhone\FlyoutSampleApp.WindowsPhone.csproj", "{E47DC225-DF0D-4091-8E24-BEFEACE13640}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Samples\FlyoutSampleApp\FlyoutSampleApp.Shared\FlyoutSampleApp.Shared.projitems*{e47dc225-df0d-4091-8e24-befeace13640}*SharedItemsImports = 4
+		Samples\FlyoutSampleApp\FlyoutSampleApp.Shared\FlyoutSampleApp.Shared.projitems*{10047fb6-0df7-4823-a78a-916981e9ad97}*SharedItemsImports = 13
 		Samples\HelloWorldApp\HelloWorldApp.Shared\HelloWorldApp.Shared.projitems*{d4116a8c-38a3-411f-a731-73507953ac1f}*SharedItemsImports = 4
 		Samples\HelloWorldApp\HelloWorldApp.Shared\HelloWorldApp.Shared.projitems*{bc55dbae-8dad-4aac-84b2-8f998b8d32e1}*SharedItemsImports = 4
+		Samples\FlyoutSampleApp\FlyoutSampleApp.Shared\FlyoutSampleApp.Shared.projitems*{a8ac6113-4503-463f-ade3-c25c1849666d}*SharedItemsImports = 4
 		Samples\HelloWorldApp\HelloWorldApp.Shared\HelloWorldApp.Shared.projitems*{7ead6644-7cc6-45ef-9406-376e95f46f8b}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -160,6 +171,50 @@ Global
 		{96544262-4795-474C-BEBB-B818D9F5D53B}.Release|ARM.ActiveCfg = Release|Any CPU
 		{96544262-4795-474C-BEBB-B818D9F5D53B}.Release|x64.ActiveCfg = Release|Any CPU
 		{96544262-4795-474C-BEBB-B818D9F5D53B}.Release|x86.ActiveCfg = Release|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|ARM.Build.0 = Debug|ARM
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|x64.ActiveCfg = Debug|x64
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|x64.Build.0 = Debug|x64
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|x64.Deploy.0 = Debug|x64
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|x86.ActiveCfg = Debug|x86
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|x86.Build.0 = Debug|x86
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Debug|x86.Deploy.0 = Debug|x86
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|ARM.ActiveCfg = Release|ARM
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|ARM.Build.0 = Release|ARM
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|ARM.Deploy.0 = Release|ARM
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|x64.ActiveCfg = Release|x64
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|x64.Build.0 = Release|x64
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|x64.Deploy.0 = Release|x64
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|x86.ActiveCfg = Release|x86
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|x86.Build.0 = Release|x86
+		{A8AC6113-4503-463F-ADE3-C25C1849666D}.Release|x86.Deploy.0 = Release|x86
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|ARM.Build.0 = Debug|ARM
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|x86.ActiveCfg = Debug|x86
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|x86.Build.0 = Debug|x86
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Debug|x86.Deploy.0 = Debug|x86
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|ARM.ActiveCfg = Release|ARM
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|ARM.Build.0 = Release|ARM
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|ARM.Deploy.0 = Release|ARM
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|x64.ActiveCfg = Release|Any CPU
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|x86.ActiveCfg = Release|x86
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|x86.Build.0 = Release|x86
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,5 +229,9 @@ Global
 		{BC55DBAE-8DAD-4AAC-84B2-8F998B8D32E1} = {7FA843F1-C9A9-40EC-BAB8-46B7252A6F36}
 		{D4116A8C-38A3-411F-A731-73507953AC1F} = {7FA843F1-C9A9-40EC-BAB8-46B7252A6F36}
 		{96544262-4795-474C-BEBB-B818D9F5D53B} = {BF125AFA-7C55-4E24-8A91-3C386325E0D8}
+		{5ABB701D-3E42-4580-A0AD-DD0117476E01} = {BF125AFA-7C55-4E24-8A91-3C386325E0D8}
+		{10047FB6-0DF7-4823-A78A-916981E9AD97} = {5ABB701D-3E42-4580-A0AD-DD0117476E01}
+		{A8AC6113-4503-463F-ADE3-C25C1849666D} = {5ABB701D-3E42-4580-A0AD-DD0117476E01}
+		{E47DC225-DF0D-4091-8E24-BEFEACE13640} = {5ABB701D-3E42-4580-A0AD-DD0117476E01}
 	EndGlobalSection
 EndGlobal

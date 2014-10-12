@@ -6,9 +6,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="using:Microsoft.Practices.Prism.StoreApps"
     xmlns:viewModels="using:HelloWorldApp.ViewModels"
-    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:ReactivePrism="using:ReactivePrism"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
+    xmlns:ReactivePrism="using:ReactivePrism"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
     x:Class="HelloWorldApp.Views.MainPage"
-    prism:ViewModelLocator.AutoWireViewModel="True"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
     d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type=viewModels:MainPageViewModel}"
     mc:Ignorable="d">
 
