@@ -86,3 +86,7 @@ MVVM Support add to Flyout. Please show Samples/FlyoutSampleApp.
         IsOpen="{Binding IsOpen.Value, Mode=TwoWay}"/>
 </Interactivity:Interaction.Behaviors>
 ```
+
+### SettingsFlyoutIsOpenBehavior
+
+MVVM support add to SettingsFlyout.

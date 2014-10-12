@@ -120,6 +120,7 @@
     <Compile Include="InteractionRequestTrigger.cs" />
     <Compile Include="NotificationTriggerAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsFlyoutIsOpenBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">

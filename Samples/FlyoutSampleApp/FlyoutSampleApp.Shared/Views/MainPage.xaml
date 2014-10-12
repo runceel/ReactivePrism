@@ -1,0 +1,38 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlyoutSampleApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
+    xmlns:ReactivePrism="using:ReactivePrism"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:ViewModels="using:FlyoutSampleApp.ViewModels"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
+    x:Class="FlyoutSampleApp.Views.MainPage"
+    d:DataContext="{d:DesignInstance Type=ViewModels:MainPageViewModel, IsDesignTimeCreatable=True}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Flyout x:Key="FlyoutBase1" Placement="Bottom">
+            <Grid Height="44" Width="129">
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Hello world" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"/>
+            </Grid>
+        </Flyout>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Interactivity:Interaction.Behaviors>
+            <ReactivePrism:FlyoutIsOpenBehavior 
+                Flyout="{StaticResource FlyoutBase1}" 
+                Parent="{Binding ElementName=button}" 
+                ClosedCommand="{Binding ClosedCommand, Mode=OneWay}" 
+                OpenedCommand="{Binding OpenedCommand, Mode=OneWay}" 
+                IsOpen="{Binding IsOpen.Value, Mode=TwoWay}"/>
+        </Interactivity:Interaction.Behaviors>
+
+        <Button x:Name="button" Content="Show Flyout" HorizontalAlignment="Left" Margin="7,61,0,0" VerticalAlignment="Top" Flyout="{StaticResource FlyoutBase1}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding FlyoutState.Value}" VerticalAlignment="Top" Style="{StaticResource BodyTextBlockStyle}"/>
+        <CheckBox Content="FlyoutStatus" HorizontalAlignment="Left" Margin="7,32,0,0" VerticalAlignment="Top" IsChecked="{Binding IsOpen.Value, Mode=TwoWay}"/>
+
+    </Grid>
+</Page>

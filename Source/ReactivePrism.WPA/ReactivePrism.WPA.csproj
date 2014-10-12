@@ -99,6 +99,9 @@
     <Compile Include="..\ReactivePrism.Win\NotificationTriggerAction.cs">
       <Link>NotificationTriggerAction.cs</Link>
     </Compile>
+    <Compile Include="..\ReactivePrism.Win\SettingsFlyoutIsOpenBehavior.cs">
+      <Link>SettingsFlyoutIsOpenBehavior.cs</Link>
+    </Compile>
     <Compile Include="..\ReactivePrism.WPF\InteractionRequestExtensions.cs">
       <Link>InteractionRequestExtensions.cs</Link>
     </Compile>
